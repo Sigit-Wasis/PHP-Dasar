@@ -58,6 +58,4 @@ $hobi = null;
 
 echo "Hobi: membaca" . $hobi . "\n"; // Output: Hobi:
 
-
-
 ?>
