@@ -35,4 +35,4 @@ Perintah git checkout branch_A dalam Git digunakan untuk berpindah ke branch yan
 
 ```
 git checkout branch_A
-``
+```
