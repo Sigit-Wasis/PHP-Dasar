@@ -22,7 +22,7 @@ $sisabagi = $a % $b;
 // Pangkat
 $pangkat = $a ** $b;
 
-// Menampilkan hasil
+// Menampilkan hasil nilai
 echo "Jumlah: " . $jumlah . "\n";
 echo "Selisih: " . $kurang . "\n";
 echo "Hasil perkalian: " . $kali . "\n";
