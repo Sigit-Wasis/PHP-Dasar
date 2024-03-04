@@ -10,10 +10,10 @@
     - Operator Increment dan Decrement
     - Operator Perbandingan
 - Buat Basic Array 
-    `
+    ```
     $keys = ['apel', 'eager', 'orange'];
     $values = ['buah', 'sendal', 'warna'];
-    `
+    ```
     - array_values() 
     - array_keys()
     - array_combine()
