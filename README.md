@@ -9,3 +9,8 @@
     - Operator Aritmatika
     - Operator Increment dan Decrement
     - Operator Perbandingan
+- Buat Basic Array 
+    - array_values() 
+    - array_keys()
+    - array_combine()
+    - array_flip()
