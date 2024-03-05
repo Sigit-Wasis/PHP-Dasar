@@ -1,0 +1,46 @@
+-- Active: 1709613084079@@127.0.0.1@3306@microdata
+CREATE TABLE Karyawan (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nama_depan VARCHAR(50) NOT NULL,
+jabatan VARCHAR(50),
+gaji INT(255)
+);
+
+INSERT INTO Karyawan(
+nama_depan,jabatan,gaji
+)
+VALUES
+('Budi', 'Programer', 10000000),
+('Ani', 'Designer', 8000000),
+('Cici', 'Marketing', 7000000),
+('Dedi', 'Administrasi', 6000000)
+
+-- untuk Menampilkan data Karyawan --
+SELECT * FROM Karyawan;
+
+-- untuk menampilkan nama dan gaji karyawan yang berjabatan Programmer --
+SELECT nama_depan, gaji FROM Karyawan WHERE jabatan = 'Programer';
+
+-- untuk Menampilkan nama karyawan yang memiliki gaji lebih dari Rp 8.000.000.--
+SELECT nama_depan FROM Karyawan WHERE gaji > 8000000;
+
+-- untuk menghitung total jumlah gaji karyawan --
+SELECT SUM(gaji) AS total_gaji FROM Karyawan;
+
+-- untuk menemukan karyawan dengan gaji tertinggi --
+SELECT nama_depan, jabatan, gaji FROM Karyawan WHERE gaji = (SELECT MAX(gaji) FROM Karyawan);
+
+-- untuk mengurutkan data karyawan berdasarkan nama (ascending) --
+SELECT * FROM Karyawan ORDER BY nama_depan ASC;
+
+-- untuk menambahkan data karyawan baru bernama "Eko" dengan jabatan "Sales" dan gaji Rp 9.000.000.
+INSERT INTO Karyawan(
+nama_depan,jabatan,gaji
+)
+VALUES
+('Eko', 'Sales', 9000000)
+
+-- untuk menghapus data karyawan dengan nama "Dedi"
+DELETE FROM Karyawan WHERE nama_depan ='Dedi'
+
+SELECT * FROM karyawan
