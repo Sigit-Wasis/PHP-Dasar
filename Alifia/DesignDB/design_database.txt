@@ -1,0 +1,77 @@
+/* 2024-03-05 15:37:27 [67 ms] */ 
+CREATE TABLE Nasabah (
+  IdNasabah INT PRIMARY KEY AUTO_INCREMENT,
+  Nama VARCHAR(255) NOT NULL,
+  Alamat VARCHAR(255) NOT NULL,
+  TanggalLahir DATE NOT NULL,
+  JenisKelamin VARCHAR(1) NOT NULL,
+  NoTelepon VARCHAR(20) NOT NULL,
+  Email VARCHAR(50) NOT NULL,
+  Password VARCHAR(255) NOT NULL
+);
+/* 2024-03-05 15:38:15 [48 ms] */ 
+CREATE TABLE Karyawan (
+  IdKaryawan INT PRIMARY KEY AUTO_INCREMENT,
+  Nama VARCHAR(255) NOT NULL,
+  Alamat VARCHAR(255) NOT NULL,
+  TanggalLahir DATE NOT NULL,
+  JenisKelamin VARCHAR(1) NOT NULL,
+  NoTelepon VARCHAR(20) NOT NULL,
+  Email VARCHAR(50) NOT NULL,
+  Password VARCHAR(255) NOT NULL
+);
+/* 2024-03-05 15:42:33 [63 ms] */ 
+CREATE TABLE Admin (
+  IdAdmin INT PRIMARY KEY AUTO_INCREMENT,
+  Nama VARCHAR(255) NOT NULL,
+  Alamat VARCHAR(255) NOT NULL,
+  TanggalLahir DATE NOT NULL,
+  JenisKelamin VARCHAR(1) NOT NULL,
+  NoTelepon VARCHAR(20) NOT NULL,
+  Email VARCHAR(50) NOT NULL,
+  Password VARCHAR(255) NOT NULL
+);
+/* 2024-03-05 15:42:38 [56 ms] */ 
+CREATE TABLE Transaksi (
+  IdTransaksi INT PRIMARY KEY AUTO_INCREMENT,
+  IdNasabah INT NOT NULL,
+  IdKaryawan INT NOT NULL,
+  NominalTransaksi DECIMAL(18,2) NOT NULL,
+  TanggalTransaksi DATE NOT NULL,
+  JenisTransaksi VARCHAR(20) NOT NULL,
+  WaktuTransaksi TIME NOT NULL,
+  Keterangan VARCHAR(255) NULL,
+  FOREIGN KEY (IdNasabah) REFERENCES Nasabah(IdNasabah),
+  FOREIGN KEY (IdKaryawan) REFERENCES Karyawan(IdKaryawan)
+);
+/* 2024-03-05 15:42:41 [50 ms] */ 
+CREATE TABLE Simpanan (
+  IdSimpanan INT PRIMARY KEY AUTO_INCREMENT,
+  IdNasabah INT NOT NULL,
+  IdKaryawan INT NOT NULL,
+  NominalSimpanan DECIMAL(18,2) NOT NULL,
+  TanggalSimpanan DATE NOT NULL,
+  WaktuSimpanan TIME NOT NULL,
+  Keterangan VARCHAR(255) NULL,
+  FOREIGN KEY (IdNasabah) REFERENCES Nasabah(IdNasabah),
+  FOREIGN KEY (IdKaryawan) REFERENCES Karyawan(IdKaryawan)
+);
+/* 2024-03-05 15:42:43 [45 ms] */ 
+CREATE TABLE Pinjaman (
+  IdPinjaman INT PRIMARY KEY AUTO_INCREMENT,
+  IdNasabah INT NOT NULL,
+  IdKaryawan INT NOT NULL,
+  NominalPinjaman DECIMAL(18,2) NOT NULL,
+  TanggalPinjaman DATE NOT NULL,
+  WaktuPinjaman TIME NOT NULL,
+  Keterangan VARCHAR(255) NULL,
+  FOREIGN KEY (IdNasabah) REFERENCES Nasabah(IdNasabah),
+  FOREIGN KEY (IdKaryawan) REFERENCES Karyawan(IdKaryawan)
+);
+/* 2024-03-05 15:42:46 [43 ms] */ 
+CREATE TABLE RiwayatTransaksi (
+  IdRiwayatTransaksi INT PRIMARY KEY AUTO_INCREMENT,
+  IdTransaksi INT NOT NULL,
+  Keterangan VARCHAR(255) NOT NULL,
+  FOREIGN KEY (IdTransaksi) REFERENCES Transaksi(IdTransaksi),
+);
