@@ -1,3 +1,4 @@
+-- Active: 1698343899136@@localhost@3306@data_karyawan
 --Tampilkan semua data dari tabel Karyawan.--
 select * from karyawan
 
