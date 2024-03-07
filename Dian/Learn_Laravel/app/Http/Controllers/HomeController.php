@@ -8,7 +8,11 @@ use App\Models\akun;
 class HomeController extends Controller
 {
     public function index(){
-        return "<h2> SELAMAT BELAJAR LARAVEL DI PT MICRODATA INDONESIA</h2>";
+        $data=array(
+            'akuns'=> akun::all()
+        );
+        return view("data.akun", $data);
+        
     }
 
    
