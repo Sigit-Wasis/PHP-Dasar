@@ -16,6 +16,17 @@
     - Membuat Controller 
     - Membuat Model
     - Membuat Koneksi Ke dalam Database
+    ----------------------------------------------
+    - Buat Migration dengan table yang bernama buku 
+        | judul_buku    | string    | 
+        | :---:         | :---:     | 
+        | tahun_terbit  | integer   |
+        | :---:         | :---:     |
+        | penerbit      | string    | 
+        | :---:         | :---:     | 
+        | penulis       | string    |
+    - Buat factory yang membuat data buku sebanyak 10
+    - Buat seeder untuk eksekusi data factory buku
 
 ## Lifecycle Laravel 
 
