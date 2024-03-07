@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\BukuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +15,18 @@ use App\Http\Controllers\HomeController;
 |
 */
 
+// Route::get('/', function () {
+//     return view('home');
+// });
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
-    return "<H2>SELAMAT DATANG</H2>";
-});
+
+// Route::get('/', function () {
+//     return "<H2>SELAMAT DATANG</H2>";
+// });
 
 Route::get('/index',[HomeController::class,'index']);
+Route::get('/buku',[BukuController::class,'buku']);

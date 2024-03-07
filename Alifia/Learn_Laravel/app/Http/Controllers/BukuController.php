@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
+use App\Models\databuku;
 
 use Illuminate\View\View;
 
 use Illuminate\Http\Request;
 
 
-class HomeController extends Controller
+class BukuController extends Controller
 {
-    public function index() {
+    public function buku() {
         $data=array(
-            'posts'=> post::all()
+            'databukus'=> databuku::all()
         );
-        return view("data.home", $data);
+        return view("data.buku", $data);
     }
 
     // public function index(): View

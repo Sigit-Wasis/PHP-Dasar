@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class databuku extends Model
 {
     use HasFactory;
-    protected $table = "laravel_belajar";
+    protected $table = "buku";
 };
