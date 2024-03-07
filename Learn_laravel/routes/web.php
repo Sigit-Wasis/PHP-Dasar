@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +14,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/belajarlaravel', function () {
-    return '<h1>selamat belajar laravel 10 ivan</h1>';
+// Route::get('/', function () {
+//     return '<h1>selamat belajar laravel 10 ivan</h1>';
+// });
+
+// Route::get('/about', function(){
+//     return'<h2>ini halaman about ivan</h2>';
+// });
+
+// Route::get('/perkalian', function(){
+//     return  9*5;
+// });
+
+// Route::get('/berita', function(){
+//     return ;
+// });
+
+Route::get('/', function () {
+    return view('welcome');
 });
 
-Route::get('/about', function(){
-    return'<h2>ini halaman about ivan</h2>';
-});
-
-Route::get('/perkalian', function(){
-    return  9*5;
-});
+Route::get('/index',[HomeController::class,'index']);
