@@ -19,3 +19,6 @@
     - array_combine()
     - array_flip()
 
+
+tutorial integrasi template dengan laravel 
+https://blog.rumahcoding.co.id/tutorial-1-penggunaan-admin-lte-template-pada-laravel/
