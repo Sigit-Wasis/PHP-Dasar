@@ -19,6 +19,7 @@
                 <input type="password" class="form-control" id="password" name="password" required>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
+            <a href="{{ url('users') }}" class="btn btn-secondary">Back</a>
         </form>
     </div>
 @endsection

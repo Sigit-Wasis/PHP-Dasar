@@ -16,6 +16,7 @@
                 <input type="email" class="form-control" id="email" name="email" value="{{ $user->email }}" required>
             </div>
             <button type="submit" class="btn btn-primary">Update</button>
+            <a href="{{ url('users') }}" class="btn btn-secondary">Back</a>
         </form>
     </div>
 @endsection
