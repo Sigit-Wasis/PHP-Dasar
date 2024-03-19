@@ -33,3 +33,10 @@ Route::put('/users/{user}', [UserController::class, 'update'])->name('users.upda
 
 // Menghapus data
 Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
+
+// Nasabah
+
+use App\Http\Controllers\NasabahController;
+
+Route::get('/nasabah', [NasabahController::class, 'index'])->name('nasabah.index');
+

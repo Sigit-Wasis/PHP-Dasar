@@ -2,13 +2,13 @@
 
 @section('content')
     <div class="container-fluid pt-4 px-4">
-        <h1>List of Users</h1>
+        <h1 align="center">Data user</h1>
 
         <div class="mb-3">
             <a href="{{ route('users.create') }}" class="btn btn-primary">Tambah Data</a>
         </div>
 
-        <div class="table-responsive">
+        <div class="table-bordered">
             <table class="table table-striped">
                 <thead>
                     <tr>
