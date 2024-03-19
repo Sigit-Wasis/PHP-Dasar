@@ -33,7 +33,14 @@
             <td>{{ $nasabah->sex }}</td>
             <td>{{ $nasabah->notelp }}</td>
             <td>{{ $nasabah->email }}</td>
-            <td><a href="{{ route('nasabah.edit', $nasabah->id_nasabah) }}" class="btn btn-warning">Edit</a></td>
+            <td>
+                <a href="{{ route('nasabah.edit', $nasabah->id_nasabah) }}" class="btn btn-warning">Edit</a>
+                <form action="{{ route('nasabah.destroy', $nasabah->id_nasabah) }}" method="POST" style="display: inline-block;">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </td>
         </tr>
         @endforeach
         </tbody>

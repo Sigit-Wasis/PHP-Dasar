@@ -59,4 +59,12 @@ class NasabahController extends Controller
 
         return redirect()->route('nasabah.index')->with('success', 'Data nasabah berhasil diperbarui');
     }
+
+     public function destroy($id_nasabah)
+    {
+        $nasabah = Nasabah::findOrFail($id_nasabah);
+        $nasabah->delete();
+
+        return redirect()->route('nasabah.index')->with('success', 'Data nasabah berhasil dihapus');
+    }
 }

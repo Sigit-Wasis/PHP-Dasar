@@ -47,3 +47,6 @@ Route::post('/nasabah/store', [NasabahController::class, 'store'])->name('nasaba
 //edit nasabah
 Route::get('/nasabah/{id_nasabah}/edit', [NasabahController::class, 'edit'])->name('nasabah.edit');
 Route::put('/nasabah/{id_nasabah}', [NasabahController::class, 'update'])->name('nasabah.update');
+
+//hapus data nasabah
+Route::delete('/nasabah/{id_nasabah}', [NasabahController::class, 'destroy'])->name('nasabah.destroy');
