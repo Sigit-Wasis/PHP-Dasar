@@ -40,3 +40,10 @@ use App\Http\Controllers\NasabahController;
 
 Route::get('/nasabah', [NasabahController::class, 'index'])->name('nasabah.index');
 
+//tambah nasabah
+Route::get('/nasabah/create', [NasabahController::class, 'create'])->name('nasabah.create');
+Route::post('/nasabah/store', [NasabahController::class, 'store'])->name('nasabah.store');
+
+//edit nasabah
+Route::get('/nasabah/{id_nasabah}/edit', [NasabahController::class, 'edit'])->name('nasabah.edit');
+Route::put('/nasabah/{id_nasabah}', [NasabahController::class, 'update'])->name('nasabah.update');

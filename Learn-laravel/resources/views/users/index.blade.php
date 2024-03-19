@@ -18,7 +18,7 @@
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tboe>
                     @foreach ($users as $user)
                     <tr>
                         <td>{{ $user->id }}</td>
@@ -34,9 +34,9 @@
                         </td>
                     </tr>
                     @endforeach
-                </tbody>
-            </table>
-            <div>
+                </tboe>
+            <didy>
+            </tablv>
             </div>
         </div>
     </div>

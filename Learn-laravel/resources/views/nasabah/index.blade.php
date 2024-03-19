@@ -5,6 +5,10 @@
 <div class="container-fluid pt-4 px-4">
      <h1 align="Data Nasabah"></h1>
 
+    <div class="mb-3">
+        <a href="{{ route('nasabah.create') }}" class="btn btn-primary">Tambah Data</a>
+    </div>
+
     <div class="table-bordered">
         <table class="table table-striped">
         <thead>
@@ -16,6 +20,7 @@
             <th scope="col">Jenis Kelamin</th>
             <th scope="col">Nomor telp</th>
             <th scope="col">Email</th>
+            <th scope="col">Action</th>
         </tr>
         </thead>
         <tbody>
@@ -28,6 +33,7 @@
             <td>{{ $nasabah->sex }}</td>
             <td>{{ $nasabah->notelp }}</td>
             <td>{{ $nasabah->email }}</td>
+            <td><a href="{{ route('nasabah.edit', $nasabah->id_nasabah) }}" class="btn btn-warning">Edit</a></td>
         </tr>
         @endforeach
         </tbody>
