@@ -50,3 +50,13 @@ Route::put('/nasabah/{id_nasabah}', [NasabahController::class, 'update'])->name(
 
 //hapus data nasabah
 Route::delete('/nasabah/{id_nasabah}', [NasabahController::class, 'destroy'])->name('nasabah.destroy');
+
+//routes simpanan
+use App\Http\Controllers\SimpananController;
+
+Route::get('/simpanan', [SimpananController::class, 'index'])->name('simpanan.index');
+Route::get('/simpanan/{id}', [SimpananController::class, 'show'])->name('simpanan.show');
+
+//route menambah simpanan
+Route::get('/simpanan/create', [SimpananController::class, 'create'])->name('simpanan.create');
+Route::post('/simpanan/store', [SimpananController::class, 'store'])->name('simpanan.store');
