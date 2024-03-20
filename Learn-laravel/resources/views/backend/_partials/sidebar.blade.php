@@ -18,7 +18,7 @@
 
                  <a href="{{ route('nasabah.index') }}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Data Nasabah</a>
 
-                  <a href="#" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>data Karyawan</a>
+                  <a href="{{ route('karyawan.index') }}" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Data Karyawan</a>
                
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Aktivitas</a>

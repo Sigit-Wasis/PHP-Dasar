@@ -51,6 +51,20 @@ Route::put('/nasabah/{id_nasabah}', [NasabahController::class, 'update'])->name(
 //hapus data nasabah
 Route::delete('/nasabah/{id_nasabah}', [NasabahController::class, 'destroy'])->name('nasabah.destroy');
 
+//routes karyawan
+use App\Http\Controllers\KaryawanController;
+
+Route::get('/karyawan', [KaryawanController::class, 'index'])->name('karyawan.index');
+
+//menambah karyawan
+
+Route::get('/karyawan/create', [KaryawanController::class, 'create'])->name('karyawan.create');
+Route::post('/karyawan/store', [KaryawanController::class, 'store'])->name('karyawan.store');
+
+//update karyawan
+Route::get('/karyawan/{id}/edit', [KaryawanController::class, 'edit'])->name('karyawan.edit');
+Route::put('/karyawan/{id}', [KaryawanController::class, 'update'])->name('karyawan.update');
+
 //routes simpanan
 use App\Http\Controllers\SimpananController;
 
