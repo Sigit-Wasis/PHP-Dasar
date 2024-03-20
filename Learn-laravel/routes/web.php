@@ -62,8 +62,12 @@ Route::get('/karyawan/create', [KaryawanController::class, 'create'])->name('kar
 Route::post('/karyawan/store', [KaryawanController::class, 'store'])->name('karyawan.store');
 
 //update karyawan
-Route::get('/karyawan/{id}/edit', [KaryawanController::class, 'edit'])->name('karyawan.edit');
-Route::put('/karyawan/{id}', [KaryawanController::class, 'update'])->name('karyawan.update');
+Route::get('/karyawan/{id_karyawan}/edit', [KaryawanController::class, 'edit'])->name('karyawan.edit');
+Route::put('/karyawan/{id_karyawan}', [KaryawanController::class, 'update'])->name('karyawan.update');
+
+//hapus karyawan
+Route::delete('/karyawan/{id_karyawan}', [KaryawanController::class, 'destroy'])->name('karyawan.destroy');
+
 
 //routes simpanan
 use App\Http\Controllers\SimpananController;
